@@ -16,9 +16,9 @@ import java.io.IOException;
 public class MatrixMultiplication {
 	final static int MIN_MATRIX_VAL = 1;
 	final static int MAX_MATRIX_VAL = 100;
-	final static int ONE_MATRIX_GROWTH_MAX = 1000;
-	final static int TWO_MATRIX_GROWTH_MAX = 1000;
-	final static int THREE_MATRIX_GROWTH_MAX = 1000;
+	final static int ONE_MATRIX_GROWTH_MAX = 100;
+	final static int TWO_MATRIX_GROWTH_MAX = 100;
+	final static int THREE_MATRIX_GROWTH_MAX = 100;
 	
 	public static void main(String args[]) throws FileNotFoundException, IOException {
 		System.out.println("Testing when one dimension grows in size...");
