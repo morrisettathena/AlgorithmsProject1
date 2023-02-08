@@ -14,9 +14,9 @@ import random
 
 MIN_MATRIX_VAL = 1
 MAX_MATRIX_VAL = 100
-ONE_MATRIX_GROWTH_MAX = 1000
-TWO_MATRIX_GROWTH_MAX = 1000
-THREE_MATRIX_GROWTH_MAX = 1000
+ONE_MATRIX_GROWTH_MAX = 100
+TWO_MATRIX_GROWTH_MAX = 100
+THREE_MATRIX_GROWTH_MAX = 100
     
     
     # Function that performs matrix multiplication.  Returns time elapsed.
