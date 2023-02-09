@@ -68,6 +68,7 @@ public class MatrixMultiplication {
 	public static void testOneDimensionGrowth(int max_dimensions) throws IOException {
 		FileWriter writer = makeWriter("OneDimensionGrowthOutput.txt");
 		// Put results in basic JSON format, by starting with a curly brace
+		writer.write("Format:  Input size : nanoseconds");
 		writer.write("{\n");
 		
 		//multiply two randomly generated matrices.
@@ -89,6 +90,7 @@ public class MatrixMultiplication {
 	public static void testTwoDimensionGrowth(int max_dimensions) throws IOException {
 		FileWriter writer = makeWriter("TwoDimensionGrowthOutput.txt");
 		// Put results in basic JSON format, by starting with a curly brace
+		writer.write("Format:  Input size : nanoseconds");
 		writer.write("{\n");
 		
 		//multiply two randomly generated matrices.
@@ -110,6 +112,7 @@ public class MatrixMultiplication {
 	public static void testThreeDimensionGrowth(int max_dimensions) throws IOException {
 		FileWriter writer = makeWriter("ThreeDimensionGrowthOutput.txt");
 		// Put results in basic JSON format, by starting with a curly brace
+		writer.write("Format:  Input size : nanoseconds");
 		writer.write("{\n");
 		
 		//multiply two randomly generated matrices.
