@@ -10,12 +10,16 @@ public class Algorithm1 {
 		 int[] userArray = a;
 	}
 	
-	public int addElements(int[] userArray){
+	public long addElements(int[] userArray){
+		long start = System.nanoTime();
 		int total = 0;
 		for(int i = 0; i <= userArray.length-1; i++ ) {
 			 total += userArray[i];
 		}
-		return total; 
+		long end = System.nanoTime();
+		long time = start - end
+		System.out.println("\n Time of the algorithm: " + time + " Nanoseconds");
+		return total, ;
 	}
 
 
