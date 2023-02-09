@@ -1,4 +1,14 @@
-
+//********************************************************************************
+//AlgProj1.java
+//Author: Lauren Moulaison
+//Date: 2/8/23
+//Class: COMSC340
+//Instructor: Cates
+//
+//Description: Creates randomly sized matrices and populates them w random vals.
+//Matrix is then multiplied by a scalar, and this operation is timed in 
+//nanoseconds. Returns result.
+//********************************************************************************
 public class AlgProj1
 {
    public static void main(String args[])
@@ -35,37 +45,36 @@ public class AlgProj1
       System.out.println("This took " + w + " nanoseconds to complete");
 }
    
-   public static int[][] makeMatrix(int m, int n) {
-      int[][] A = new int[m][n];
-      for (int i = 0; i < m; i++){
-         for (int j = 0 ; j < n; j++){
-            //populating each cell in the matrix w a random int
-            int entries = (int)(Math.random() * 101);
-            A[i][j] = entries;
+      public static int[][] makeMatrix(int m, int n) {
+         int[][] A = new int[m][n];
+         for (int i = 0; i < m; i++){
+            for (int j = 0 ; j < n; j++){
+               //populating each cell in the matrix w a random int
+               int entries = (int)(Math.random() * 101);
+               A[i][j] = entries;
+            }
          }
-      }
-      return A;
+         return A;
 
-   }
-   
-   public static void printMatrix(int[][] matrix) {
-         //printing the scaled matrix
-      for (int i = 0; i < matrix.length; i++){
-         for (int j = 0; j < matrix[0].length; j++){
-            System.out.printf("%5d", matrix[i][j]);
-         }
-         System.out.println();
       }
-   }
+   
+      public static void printMatrix(int[][] matrix) {
+         //printing the scaled matrix
+         for (int i = 0; i < matrix.length; i++){
+            for (int j = 0; j < matrix[0].length; j++){
+               System.out.printf("%5d", matrix[i][j]);
+            }
+            System.out.println();
+         }
+      }
   
    
-   static long scalarmatmult(int b, int A[][]){
-   long startTime = System.nanoTime();
-               for (int i = 0; i < A.length; i++){
+      static long scalarmatmult(int b, int A[][]){
+      long startTime = System.nanoTime();
+          for (int i = 0; i < A.length; i++){
              for(int j = 0; j < A[0].length; j++){
                  A[i][j] = A[i][j] * b;
              }
-      
           }
       long endTime = System.nanoTime();
       long duration = (endTime - startTime);
