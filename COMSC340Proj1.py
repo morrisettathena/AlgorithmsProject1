@@ -22,7 +22,7 @@ np.set_printoptions(threshold=sys.maxsize)
 
 #We can time the operation here
 def scalarmatmult():
-    begin = time.time()
+    begin = time.perf_counter_ns() #determine the start time
     b = np.random.randint(100)
 
     A = np.random.randint(1,100,size=(m,n))
@@ -32,8 +32,9 @@ def scalarmatmult():
     A = A * b
     #print(A * b)
 
-    end = time.time()
-    print("It took ", end, "nanoseconds to complete") 
+    end = time.perf_counter_ns() #determine the start time
+    timer = end - begin
+    print("It took ", timer, "nanoseconds to complete") 
     
 #call
 scalarmatmult()
